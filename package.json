@@ -1,0 +1,54 @@
+{
+   "name": "carcasse",
+   "version": "0.1.1",
+   "description": "Build structured, modular and full-OOP JavaScript projects",
+   "keywords": [
+       "structured",
+       "oop",
+       "modular",
+       "class",
+       "classes",
+       "commonjs",
+       "module",
+       "backbone",
+       "sencha"
+   ],
+   "maintainers": [
+       {
+           "name": "Tomas Aparicio",
+           "email": "tomas@rijndael-project.com",
+           "web": "http://tomas.aparicio.me" 
+       } 
+   ],
+   "contributors": [],
+   "bugs": {
+       "web": "https://github.com/h2non/carcassejs/" 
+   },
+   "licenses": [
+       {
+           "type": "GPL 3.0",
+           "url": "http://www.gnu.org/licenses/gpl-3.0-standalone.html" 
+       } 
+   ],
+   "repositories": [
+       {
+           "type": "git",
+           "url": "https://github.com/h2non/carcassejs.git" 
+       } 
+   ],
+   "dependencies": {},
+   "os": ["linux", "macos", "win"],
+   "cpu": ["x86", "ppc", "x86_64"],
+   "engines": ["v8", "node", "browser", "rhino"],
+   "scripts": {
+      "install": "install.js",
+      "uninstall": "uninstall.js",
+      "build": "build.js",
+      "test": "test.js" 
+   },
+   "directories": {
+      "doc": "docs/"
+      "lib": "src/",
+      "bin": "bin/"
+   } 
+}

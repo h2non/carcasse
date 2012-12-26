@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Carcasse - Complete Example</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <script type="text/javascript" src="../carcasse.js"></script>
+        <script type="text/javascript" src="js/underscore.js"></script>
+        <script type="text/javascript" src="js/backbone.js"></script>
+        
+        <script type="text/javascript">
+
+            Carcasse.Loader.setConfig({
+                enabled: true,
+                paths: {
+                    'Carcasse': '../lib/src/',
+                    'App': '',
+                    'Backbone': 'js/'
+                }
+            });
+
+            Carcasse.define('Person', {
+                extend: 'Backbone.Model',
+                require: [ 'Backbone.Model' ],
+                constructor: function(config) {
+                    console.log('Constructor called!');
+                },
+                legs: 2,
+                getLegs: function() {
+                    return this.legs;
+                }
+            });
+
+            Carcasse.define('Dog', {
+                extend: 'Backbone.Model',
+                constructor: function(config) {
+                    console.log('Constructor dog!');
+                },
+                legs: 2,
+                getLegs: function() {
+                    return this.legs;
+                }
+            });
+
+            Carcasse.Injector.configure({
+                contactStore: {
+                    fn: function() {
+                        return Carcasse.create( 'Person' );
+                    },
+                    eager: true
+                },
+                contactManager: {
+                    fn: function( instance ) {
+                        return Carcasse.create( 'Person' );
+                    },
+                    singleton: false
+                }
+            });
+
+            Carcasse.define( 'ContactManager', {
+                extend: 'Person',
+                mixins: [ 'Carcasse.mixin.Injectable' ],
+                inject: [ 'contactStore', 'contactManager' ],
+                constructor: function () {
+                    console.log(this);
+                    console.log(this.contactStore);
+                },
+                test: true
+            });
+            
+            var instance = new ContactManager();
+            
+        </script>
+    </head>
+    <body>
+        <div>CarcasseJS - Basic example</div>
+    </body>
+</html>

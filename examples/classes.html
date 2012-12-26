@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Carcasse - Basic example</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <script type="text/javascript" src="../lib/carcass.js"></script>
+        
+        <script type="text/javascript">
+            
+            Carcass.define('Person', {
+                constructor: function () {
+                    console.log('Constructor called!');
+                },
+                legs: 2,
+                getLegs: function () {
+                    return this.legs;
+                }
+            });
+            
+            var instance = new Person();
+            
+        </script>
+    </head>
+    <body>
+        <div>CarcassJS - Basic example</div>
+    </body>
+</html>
