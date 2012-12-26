@@ -63,6 +63,7 @@ Carcasse.Injector.configure({
 	contactManager: 'MyApp.manager.ContactManager',
 	...
 });
+```
 
 ## Examples
 
