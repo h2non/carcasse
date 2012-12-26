@@ -75,12 +75,13 @@ Carcasse.Injector.configure({
 	* Tomas Aparicio <tomas@rijndael-project.com>
 - Sencha class system
 	* Sencha framework authors <http://sencha.com>
-- Third-part authors
-	* Deft
+- Third-party authors
+	* John Yanarella
+	* Ryan Campbell
+	* Brian Kotek
+	* David Tucker
 
 ## License
-
-GNU GPL 3.0
 
 ```
 Carcasse JS
@@ -102,4 +103,4 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ```
 
-See <LICENSE.md>
+See LICENSE.md
